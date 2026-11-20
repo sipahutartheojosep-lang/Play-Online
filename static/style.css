@@ -1,0 +1,781 @@
+
+/* ==========================
+   GENERAL SETTINGS
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 85px 8%;
+}
+
+
+/* ==========================
+   HEADER / NAVBAR
+========================== */
+
+.header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #10182d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #263450;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #8b7bff;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #c7cce0;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a99dff;
+}
+
+.nav-button {
+    background: #7664f5;
+    padding: 11px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.main-button:hover {
+    background: #9587ff;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+    min-height: 510px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 40%, #322d69, transparent 35%),
+        #0b1020;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #a99dff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #9587ff;
+}
+
+.hero-description {
+    color: #aeb7cc;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #7664f5;
+    padding: 14px 25px;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-image {
+    width: 330px;
+    height: 330px;
+    background: linear-gradient(135deg, #7664f5, #332d71);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 60px #7664f544;
+    transform: rotate(5deg);
+}
+
+.game-icon {
+    font-size: 130px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 35px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.icon-one {
+    top: 20px;
+    left: 25px;
+}
+
+.icon-two {
+    bottom: 25px;
+    right: 25px;
+}
+
+.icon-three {
+    top: 45%;
+    right: -20px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* ==========================
+   ACCOUNT CARDS
+========================== */
+
+.account {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.account-card {
+    background: #151e35;
+    border: 1px solid #293552;
+    padding: 22px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.account-icon {
+    font-size: 30px;
+    background: #29264f;
+    padding: 13px;
+    border-radius: 12px;
+}
+
+.account-card p {
+    color: #aeb7cc;
+    font-size: 13px;
+}
+
+.account-card h3 {
+    font-size: 19px;
+    margin-top: 3px;
+}
+
+
+/* ==========================
+   SECTION HEADING
+========================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.section-heading > p:last-child {
+    color: #aeb7cc;
+}
+
+
+/* ==========================
+   GAME CARDS
+========================== */
+
+.games {
+    background: #10182d;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.game-card {
+    background: #19243e;
+    border: 1px solid #2b3858;
+    padding: 28px;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: #8878ff;
+    box-shadow: 0 15px 30px #00000030;
+}
+
+.game-picture {
+    width: 65px;
+    height: 65px;
+    background: #302d60;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+
+.game-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #aeb7cc;
+    font-size: 14px;
+    min-height: 48px;
+    margin-bottom: 18px;
+}
+
+.game-card a {
+    display: inline-block;
+    color: #a99dff;
+    font-weight: bold;
+}
+
+.coming-soon {
+    display: inline-block;
+    background: #303b56;
+    color: #c6cce0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.featured {
+    border-color: #7664f5;
+}
+
+
+/* ==========================
+   MEMORY MATCH GAME
+========================== */
+
+.demo {
+    background:
+        radial-gradient(circle at 50% 40%, #28265a, transparent 60%),
+        #0b1020;
+}
+
+.game-panel {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    background: #151e35;
+    border: 1px solid #344365;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px #00000030;
+}
+
+.game-instruction {
+    background: #202b48;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.game-instruction h3 {
+    margin-bottom: 10px;
+    color: #b3a9ff;
+}
+
+.game-instruction p {
+    color: #c3cbe0;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.score-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.score-panel p {
+    color: #aeb7cc;
+    font-size: 14px;
+}
+
+.score-panel h2 {
+    color: #a99dff;
+    font-size: 27px;
+}
+
+.restart-button {
+    padding: 12px 20px;
+    background: #7664f5;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.restart-button:hover {
+    background: #9587ff;
+    transform: scale(1.05);
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    gap: 12px;
+    justify-content: center;
+    margin: 25px auto;
+}
+
+.memory-card {
+    width: 75px;
+    height: 85px;
+    border: 1px solid #7466d9;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #5547a9, #302b68);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: scale(1.07);
+    background: #6659c5;
+}
+
+.memory-card.flipped {
+    background: #e7e4ff;
+    color: #25214e;
+}
+
+.memory-card.matched {
+    background: #278b68;
+    color: white;
+    border-color: #48d6a3;
+    cursor: default;
+}
+
+.game-note {
+    text-align: center;
+    color: #929db5;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/* ==========================
+   WALLET SECTION
+========================== */
+
+.wallet {
+    background: #10182d;
+}
+
+.wallet-card {
+    max-width: 450px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #5547a9, #25265a);
+    box-shadow: 0 15px 40px #00000040;
+}
+
+.wallet-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.wallet-card p {
+    color: #d4d3f5;
+}
+
+.wallet-card h1 {
+    font-size: 38px;
+    margin: 10px 0 20px;
+}
+
+.wallet-description {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.about-content > p:last-child {
+    color: #aeb7cc;
+    line-height: 1.9;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #7664f5, #30265f);
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #070b16;
+    border-top: 1px solid #263450;
+}
+
+footer h2 {
+    color: #a99dff;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aeb7cc;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .account {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-image {
+        width: 240px;
+        height: 240px;
+    }
+
+    .game-icon {
+        font-size: 95px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    .game-panel {
+        padding: 18px 10px;
+    }
+
+    .memory-board {
+        grid-template-columns: repeat(4, 58px);
+        gap: 8px;
+    }
+
+    .memory-card {
+        width: 58px;
+        height: 68px;
+        font-size: 23px;
+    }
+
+    .score-panel h2 {
+        font-size: 22px;
+    }
+
+    .restart-button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .wallet-card h1 {
+        font-size: 30px;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 150px;
+        font-size: 70px;
+    }
+}
+
+/* ==========================
+   TRIVIA CHALLENGE
+========================== */
+
+.trivia {
+    background: #10182d;
+}
+
+.trivia-panel {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    background: #19243e;
+    border: 1px solid #344365;
+    border-radius: 20px;
+}
+
+.trivia-info {
+    display: flex;
+    justify-content: space-between;
+    color: #b9c3dc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.trivia-info strong {
+    color: #a99dff;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #303b56;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#trivia-progress {
+    width: 0%;
+    height: 100%;
+    background: #8b7bff;
+    transition: width 0.3s;
+}
+
+.trivia-panel h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.answer-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.answer-button {
+    padding: 16px;
+    border: 1px solid #465578;
+    border-radius: 10px;
+    background: #253351;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.answer-button:hover:not(:disabled) {
+    background: #5145a0;
+    border-color: #9b8eff;
+}
+
+.answer-button:disabled {
+    cursor: default;
+}
+
+.answer-button.correct {
+    background: #217c5c;
+    border-color: #45d5a0;
+}
+
+.answer-button.wrong {
+    background: #943e55;
+    border-color: #ff829b;
+}
+
+#trivia-feedback {
+    margin: 20px 0;
+    font-size: 14px;
+    min-height: 22px;
+}
+
+.correct-text {
+    color: #55dfa9;
+}
+
+.wrong-text {
+    color: #ff829b;
+}
+
+#next-question {
+    margin-top: 10px;
+}
+
+#next-question:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.trivia-result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trivia-result h1 {
+    color: #a99dff;
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.trivia-result p {
+    color: #b9c3dc;
+}
+
+@media (max-width: 550px) {
+
+    .trivia-panel {
+        padding: 20px 15px;
+    }
+
+    .answer-options {
+        grid-template-columns: 1fr;
+    }
+
+    .trivia-panel h3 {
+        font-size: 18px;
+    }
+
+    .trivia-info {
+        font-size: 12px;
+    }
+}
