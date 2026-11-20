@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayLab - Digital Game Playground</title>
+    <link rel="stylesheet" href="static/style.css"
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="logo">🎮 Play<span>Lab</span></div>
+
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#games">Permainan</a>
+            <a href="#wallet">Dompet Demo</a>
+            <a href="#about">Tentang</a>
+        </nav>
+
+        <a href="#memory-game" class="nav-button">Main Sekarang</a>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO PLAYLAB</p>
+
+            <h1>
+                Explore Games.<br>
+                <span>Challenge Yourself.</span>
+            </h1>
+
+            <p class="hero-description">
+                Selamat datang di PlayLab, tempat untuk bermain,
+                belajar, menguji kemampuan, dan mengumpulkan poin
+                virtual melalui berbagai permainan menarik.
+            </p>
+
+            <a href="#games" class="main-button">
+                Jelajahi Permainan →
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <div class="game-icon">🎮</div>
+            <div class="floating-icon icon-one">⭐</div>
+            <div class="floating-icon icon-two">🏆</div>
+            <div class="floating-icon icon-three">🎯</div>
+        </div>
+
+    </section>
+
+
+    <!-- ACCOUNT INFORMATION -->
+    <section class="account">
+
+        <div class="account-card">
+            <div class="account-icon">👤</div>
+            <div>
+                <p>Player</p>
+                <h3>Guest Player</h3>
+            </div>
+        </div>
+
+        <div class="account-card">
+            <div class="account-icon">🪙</div>
+            <div>
+                <p>Virtual Points</p>
+                <h3 id="total-points">1.000 PTS</h3>
+            </div>
+        </div>
+
+        <div class="account-card">
+            <div class="account-icon">🎮</div>
+            <div>
+                <p>Available Games</p>
+                <h3>6 Games</h3>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- GAMES SECTION -->
+    <section class="games" id="games">
+
+        <div class="section-heading">
+            <p class="tagline">CHOOSE YOUR GAME</p>
+            <h2>Explore Our Games</h2>
+            <p>Pilih permainan dan tantang kemampuanmu!</p>
+        </div>
+
+        <div class="game-container">
+
+            <div class="game-card featured">
+                <div class="game-picture">🧠</div>
+                <h3>Memory Match</h3>
+                <p>Temukan dua kartu dengan gambar yang sama.</p>
+                <a href="#memory-game">Play Game →</a>
+            </div>
+
+            <div class="game-card">
+                <div class="game-picture">❓</div>
+                <h3>Trivia Challenge</h3>
+                <p>Uji pengetahuanmu melalui berbagai pertanyaan.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+            <div class="game-card">
+                <div class="game-picture">⚡</div>
+                <h3>Reaction Test</h3>
+                <p>Uji kecepatan reaksimu dalam permainan.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+            <div class="game-card">
+                <div class="game-picture">🔤</div>
+                <h3>Word Puzzle</h3>
+                <p>Asah kemampuan bahasa dan kosakatamu.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+            <div class="game-card">
+                <div class="game-picture">🔢</div>
+                <h3>Number Challenge</h3>
+                <p>Latih kemampuan berhitung dan logikamu.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+            <div class="game-card">
+                <div class="game-picture">🧩</div>
+                <h3>Pattern Finder</h3>
+                <p>Temukan pola yang tepat untuk menyelesaikan tantangan.</p>
+                <span class="coming-soon">Coming Soon</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORY MATCH GAME -->
+    <section class="demo" id="memory-game">
+
+        <div class="section-heading">
+            <p class="tagline">LET'S PLAY</p>
+            <h2>🧠 Memory Match</h2>
+            <p>Temukan semua pasangan gambar yang sama!</p>
+        </div>
+
+        <div class="game-panel">
+
+            <div class="game-instruction">
+                <h3>How to Play?</h3>
+                <p>
+                    1. Klik satu kartu untuk membukanya.<br>
+                    2. Klik kartu lainnya untuk mencari pasangan.<br>
+                    3. Jika gambarnya sama, kamu mendapatkan 10 poin.<br>
+                    4. Temukan semua pasangan untuk memenangkan permainan!
+                </p>
+            </div>
+
+            <div class="score-panel">
+                <div>
+                    <p>Your Score</p>
+                    <h2><span id="memory-score">0</span> PTS</h2>
+                </div>
+
+                <button id="restart-memory" class="restart-button">
+                    ↻ Main Lagi
+                </button>
+            </div>
+
+            <div class="memory-board"></div>
+
+            <p class="game-note">
+                Game ini menggunakan poin virtual dan tidak melibatkan uang asli.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+<!-- TRIVIA CHALLENGE -->
+<section class="trivia" id="trivia">
+
+    <div class="section-heading">
+        <p class="tagline">TEST YOUR KNOWLEDGE</p>
+        <h2>❓ Trivia Challenge</h2>
+        <p>Jawab pertanyaan dan kumpulkan poin!</p>
+    </div>
+
+    <div class="trivia-panel">
+
+        <div class="trivia-info">
+            <span id="question-number">Question 1 / 5</span>
+            <span>Score: <strong id="trivia-score">0</strong> PTS</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="trivia-progress"></div>
+        </div>
+
+        <h3 id="trivia-question">
+            Pertanyaan akan muncul di sini.
+        </h3>
+
+        <div class="answer-options" id="answer-options">
+        </div>
+
+        <p id="trivia-feedback"></p>
+
+        <button id="next-question" class="restart-button" disabled>
+            Pertanyaan Berikutnya →
+        </button>
+
+        <div id="trivia-result" class="trivia-result"></div>
+
+    </div>
+
+</section>
+
+    </section>
+
+
+    <!-- WALLET SECTION -->
+    <section class="wallet" id="wallet">
+
+        <div class="section-heading">
+            <p class="tagline">YOUR COLLECTION</p>
+            <h2>Virtual Wallet</h2>
+            <p>Kumpulan poin virtual dari permainan.</p>
+        </div>
+
+        <div class="wallet-card">
+
+            <div class="wallet-icon">🪙</div>
+
+            <p>Total Virtual Points</p>
+            <h1 id="wallet-points">1.000 PTS</h1>
+
+            <p class="wallet-description">
+                Poin ini hanya digunakan untuk simulasi dan hiburan
+                di dalam website PlayLab.
+            </p>
+
+        </div>
+
+    </section>
+    
+<!-- TRIVIA CHALLENGE -->
+<section class="trivia" id="trivia">
+
+    <div class="section-heading">
+        <p class="tagline">TEST YOUR KNOWLEDGE</p>
+        <h2>❓ Trivia Challenge</h2>
+        <p>Jawab pertanyaan dan kumpulkan poin!</p>
+    </div>
+
+    <div class="trivia-panel">
+
+        <div class="trivia-info">
+            <span id="question-number">Question 1 / 5</span>
+            <span>Score: <strong id="trivia-score">0</strong> PTS</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="trivia-progress"></div>
+        </div>
+
+        <h3 id="trivia-question">
+            Pertanyaan akan muncul di sini.
+        </h3>
+
+        <div class="answer-options" id="answer-options">
+        </div>
+
+        <p id="trivia-feedback"></p>
+
+        <button id="next-question" class="restart-button" disabled>
+            Pertanyaan Berikutnya →
+        </button>
+
+        <div id="trivia-result" class="trivia-result"></div>
+
+    </div>
+
+</section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <div class="about-content">
+            <p class="tagline">ABOUT PLAYLAB</p>
+
+            <h2>More Than Just Playing</h2>
+
+            <p>
+                PlayLab merupakan proyek website demonstrasi
+                permainan digital. Website ini dirancang untuk
+                memberikan pengalaman bermain yang menyenangkan
+                sekaligus melatih kemampuan berpikir, mengingat,
+                dan memecahkan masalah.
+            </p>
+
+        </div>
+
+        <div class="about-image">
+            🎯
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>🎮 PlayLab</h2>
+        <p>Explore Games. Challenge Yourself.</p>
+        <p class="copyright">
+            © 2026 PlayLab. Digital Game Playground.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
